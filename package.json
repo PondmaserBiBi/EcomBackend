@@ -3,15 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "@prisma/client": "^6.19.0",
+    "@prisma/client": "6.7.0",
     "bcryptjs": "^3.0.3",
     "cloudinary": "^2.8.0",
     "cors": "^2.8.5",
@@ -25,6 +20,6 @@
   },
   "devDependencies": {
     "dotenv-cli": "^11.0.0",
-    "prisma": "^7.1.0"
+    "prisma": "6.7.0"
   }
 }
