@@ -5,16 +5,22 @@ const { readdirSync } = require('fs')
 const cors = require('cors')
 
 
-// middleware
 app.use(morgan('dev'))
 app.use(express.json({ limit: '20mb' }))
 app.use(cors())
 
 
-readdirSync('./routes').map((c) => app.use('/', require('./routes/' + c)))
+app.get("/", (req, res) => {
+    res.send("Backend is running ")
+})
 
 
-// start sever
-app.listen(5000,
-    () => console.log('Server is runing on port 5000')
+readdirSync('./routes').map((c) =>
+    app.use('/', require('./routes/' + c))
 )
+
+
+const port = process.env.PORT || 5000
+app.listen(port, () => {
+    console.log('Server is running on port ' + port)
+})
