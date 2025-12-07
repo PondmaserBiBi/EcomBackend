@@ -1,0 +1,10 @@
+{
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [],
+    "buildCommand": "npx prisma generate && npm run build"
+}
